@@ -145,7 +145,7 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
               valueListenable: _currentPageNotifier,
               builder: (context, value, child) {
                 return Indicator(
-                  size: ,
+                  size: widget.size,
                   count: widget.children.length,
                   currentIndex: value % widget.children.length,
                   activeColor: widget.indicatorColor,
