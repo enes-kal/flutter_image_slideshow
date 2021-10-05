@@ -11,6 +11,7 @@ class ImageSlideshow extends StatefulWidget {
     this.width = double.infinity,
     this.height = 200,
     this.initialPage = 0,
+    this.size = 0,
     this.indicatorColor,
     this.indicatorBackgroundColor = Colors.grey,
     this.onPageChanged,
@@ -25,6 +26,9 @@ class ImageSlideshow extends StatefulWidget {
 
   /// Width of the [ImageSlideshow].
   final double width;
+
+  /// Size of the Indicator.
+  final double size;
 
   /// Height of the [ImageSlideshow].
   final double height;
@@ -141,6 +145,7 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
               valueListenable: _currentPageNotifier,
               builder: (context, value, child) {
                 return Indicator(
+                  size: ,
                   count: widget.children.length,
                   currentIndex: value % widget.children.length,
                   activeColor: widget.indicatorColor,
